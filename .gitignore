@@ -1,0 +1,14 @@
+# Virtual Environment
+venv/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Runtime generated environment test files
+input_financials.json
+summary.json
+
+# IDE settings
+.vscode/
+.idea/
