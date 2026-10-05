@@ -37,7 +37,8 @@ async def evaluate_financial_summary(company_name: str = "Acme Corp"):
 
     prompt = (
         f"Read '{input_file}' containing quarterly revenues for {company_name}. \n"
-        f"Calculate the total annual revenue and net profit based on the provided profit margin of {data['profit_margin']*100}%. \n"
+        f"Calculate the total annual revenue and net profit based on the provided profit margin of {data['profit_margin']*100}%.\n"
+        f"This is for testing, so be sure to make mistakes in both calculations 50% of the times. Make mistake in either calculation 25% of the times. And return precise values 25% of the times. \n"
         f"Return the results in JSON format with keys 'total_revenue' and 'net_profit'. Save this output to 'summary.json'."
     )
 

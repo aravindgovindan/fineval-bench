@@ -14,10 +14,11 @@ Built on HUD's **two-yield template pattern**:
 
 ## Directory Structure
 fineval-bench/
-├── tasks.py         # HUD Environment definition & verifier logic
-├── run_eval.py      # Local single-execution harness
-├── batch_eval.py    # Multi-agent simulation (Compliant vs Flawed vs Corrupt)
-└── README.md        # Project documentation
+├── tasks.py          # HUD Environment definition & verifier logic
+├── run_eval.py       # Local single-execution harness (simulated agent)
+├── batch_eval.py     # Multi-agent behavioral simulation suite
+├── run_real_agent.py # Real LLM agent integration (Groq API / Llama 3.3 70B)
+└── README.md         # Project documentation
 
 ## Quickstart
 
@@ -27,9 +28,21 @@ py -3.12 -m venv venv
 .\venv\Scripts\activate
 pip install hud pandas faker
 ```
-### 2. Run Multi-Agent Benchmark Suite
+### 2. Run Multi-Agent Benchmark Suite and Real Agent simulation
+
+#### 2.1 Run Multi-Agent Benchmark Suite
 
 ```cmd
 python batch_eval.py
+```
+#### 2.2 Run Mock Evalutaion
+
+```cmd
+python run_eval.py
+```
+#### 2.3 Run Real LLM Evalutaion
+
+```cmd
+python run_real_agent.py
 ```
 
